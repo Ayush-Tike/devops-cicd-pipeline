@@ -11,7 +11,7 @@ app = FastAPI(
 @app.get("/")
 def home():
     return {
-        "message": "DevOps CI/CD Pipeline is running!",
+        "message": "Version 2 deployed through CI/CD!",
         "application": "CI/CD Demo API",
         "status": "success"
     }
