@@ -1,4 +1,3 @@
-
 services:
   api:
     image: ${IMAGE:-devops-cicd-demo:local}
