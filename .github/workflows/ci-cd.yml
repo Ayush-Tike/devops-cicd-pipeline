@@ -56,14 +56,15 @@ jobs:
 
       # 7. Scan Docker image
       - name: Scan Image with Trivy
-        uses: uses: aquasecurity/trivy-action@v0.36.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
-          image-ref: ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          image-ref: "${{ env.IMAGE_NAME }}:${{ github.sha }}"
           format: table
           exit-code: "1"
           ignore-unfixed: true
-          vuln-type: os,library
-          severity: CRITICAL,HIGH
+          vuln-type: "os,library"
+          severity: "CRITICAL,HIGH"
+
 
       # 8. Login to GitHub Container Registry
       - name: Login to GHCR
